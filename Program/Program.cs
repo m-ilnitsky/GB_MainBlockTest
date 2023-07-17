@@ -3,11 +3,11 @@ using System.Linq;
 
 int ReadInt(string message, int minNumber = int.MinValue, int maxNumber = int.MaxValue)
 {
-    Console.Write(message);
-    string line = Console.ReadLine();
-
     while (true)
     {
+        Console.Write(message);
+        string line = Console.ReadLine();
+
         if (int.TryParse(line, out int number))
         {
             if (minNumber <= number && number <= maxNumber)
@@ -19,7 +19,7 @@ int ReadInt(string message, int minNumber = int.MinValue, int maxNumber = int.Ma
             continue;
         }
 
-        Console.WriteLine($"Введите коррекное целое число!");
+        Console.WriteLine("Введите коррекное целое число!");
     }
 }
 
